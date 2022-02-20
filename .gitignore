@@ -1,0 +1,5 @@
+dist/
+node_modules/
+C:\\Users\\daniq\\OneDrive\\One drive shizzle\\Documenten\\Mendix\\testLinkWidget-main/
+*.log
+.env

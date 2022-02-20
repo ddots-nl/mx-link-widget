@@ -1,0 +1,32 @@
+{
+  "name": "linkwidget",
+  "widgetName": "LinkWidget",
+  "version": "1.0.0",
+  "description": "Widget that let you configure how you want to target the url",
+  "copyright": "Danique Montanus",
+  "author": "Danique",
+  "engines": {
+    "node": ">=12"
+  },
+  "config": {
+    "projectPath": "C:\\Users\\daniq\\OneDrive\\One drive shizzle\\Documenten\\Mendix\\testLinkWidget-main/",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "ddots",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^9.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
+}

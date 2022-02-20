@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="ddots.linkwidget.LinkWidget" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Link Widget</name>
+    <description>Widget that let you configure how you want to target the url</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="Main">
+                <property key="textLink" type="string" required="true">
+                    <caption>Text of link</caption>
+                    <description></description>
+                </property>
+                <property key="urlLink" type="attribute" required="true">
+	                <caption>Link url</caption>
+                    <description />
+	                <attributeTypes>
+		                <attributeType name="String"/>
+	                </attributeTypes>
+                </property>
+                <property key="icon" type="icon" required="false">
+                    <caption>Icon</caption>
+                    <description></description>
+                </property>
+                <property key="tooltip" type="string" required="false">
+                    <caption>tooltip</caption>
+                    <description></description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Action">
+                <property key="howToOpenUrl" type="enumeration" defaultValue="_blank">
+	                <caption>Target</caption>
+	                <description>The target attribute specifies where to open the linked document.</description>
+	                <enumerationValues>
+		                <enumerationValue key="_blank">Open the linked document in a new window or tab</enumerationValue>
+		                <enumerationValue key="_self">Open the linked document in the same frame as it was clicked</enumerationValue>
+                        <enumerationValue key="_top">Open the linked document in the full body of the window</enumerationValue>
+                        <enumerationValue key="_parent">Open the linked document in the parent frame</enumerationValue>
+	                </enumerationValues>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>
