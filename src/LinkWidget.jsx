@@ -6,7 +6,6 @@ export default class LinkWidget extends Component {
     render() {
         const {textLink, urlLink, howToOpenUrl, tooltip, icon} = this.props;
         return(
-
             <a 
                 href={urlLink.value} 
                 target={howToOpenUrl} 
