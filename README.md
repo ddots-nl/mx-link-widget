@@ -1,29 +1,37 @@
-## LinkWidget
-Widget that let you configure how you want to target the url
+# Widget: Open link in new tab
+Have full control over the behavior of a hyperlink in your Mendix application. You can open the link in a new browser tab, or in the parent frame if Mendix is included as an iframe.
 
-##Usage
-![mendix-configure](https://user-images.githubusercontent.com/99649048/154851343-27566104-c258-44a9-8915-765599697831.PNG)
+## How to use the "open link in new tab" widget?
 
-First you will have to setup a entity in the domain model that stores the Url in a String Attribute.
+1. First, we have to configure the domain model and make an entity where your url will stored. **Note the url needs to be stored as an attribute String.**
+   
+   **Example of an configuration of the entity in the domain model**
+   
+   ![entity](https://user-images.githubusercontent.com/99649048/154936199-a162aa39-9fa9-4c87-8bcd-924dd5282e95.PNG)
 
-After that you can access the attribute where your string URL will be stored. Also, when you have configured the Url in a string attribute, you can configure the text that needs to be display for the link button in your application, you can configure a icon from the mendix icon library, configure a tooltip if it is needed, and you can specify how you want to target the url. You have the following options for targetting the url:
+2. Second, add a dataview to your page and set the Data source type to **Microflow or Nanoflow**.
+3. Third, set up the microflow or nanaflow to return an object to your dataview.
+   **Example of an Microflow**
+   
+   ![microflow](https://user-images.githubusercontent.com/99649048/154941341-27c01697-4e33-409f-98de-f2833ad2bc26.PNG)
+    
+    - The microflow first retrieves the entity we would like to access;
+    - The decision checks if there is data in the entity;
+    - If the entity is empty, it creates an object with the default value of https://www.ddots.nl;
+    - If the entity is not empty, it returns the current value that exists in the database.
+    
+ 4. When you configure the dataview with the microflow above, you can access the url attribute that exists in your entity in the "open link in new tab" widget. From there you
+    set up the necessary data that is needed for the widget. (Hyperlink and Link Button text). 
+    
+    ![linkwidget configuration](https://user-images.githubusercontent.com/99649048/154944083-b5c18100-29ce-411b-9d06-69deac4cff00.PNG)
 
-![target values](https://user-images.githubusercontent.com/99649048/154851575-a92662f1-90e3-4bfb-b1dd-fba7ee34dc3d.PNG)
+ 5. If you want to change the current url link, you can use an NewEdit page for the entity, and use the default save button that Mendix uses as default.
+    
+    ![newedit page](https://user-images.githubusercontent.com/99649048/154943662-4b77edde-d673-42b1-a08c-e5e6486394ea.PNG)
 
-## Microflow configuration to update and access your attribute value in a listview and dataview
+## Sandbox environment
 
-##Microflow: DS_LinkHelperMf
-
-![DS_LinkHelperMF](https://user-images.githubusercontent.com/99649048/154851769-de59d945-1a74-4d59-b644-f490222e59cd.PNG)
-
-1. The microflow will first check if the database is empty, this is necessary when we want to change the url with a input field.]
-2. If the database is empty it will create a new object and configure the url that is passed in the input field.
-3. If the database is not empty it will change the current value of the string attribute to the new value that is entered in the input field.
-
-![inputs](https://user-images.githubusercontent.com/99649048/154852009-8287e0f1-43c3-440e-9819-a607f69b5afd.PNG)
-
-The microflow that will fire the when the save button in de edit_view is clicked. 
-
+https://apptest732-sandbox.mxapps.io/index.html?profile=Responsive
 
 ## Development and contribution
 
