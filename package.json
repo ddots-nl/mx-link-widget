@@ -1,19 +1,19 @@
 {
-  "name": "widget.web",
+  "name": "linkwidget",
   "widgetName": "LinkWidget",
   "version": "1.0.0",
   "description": "Have full control over the behavior of a hyperlink in your Mendix application. You can open the link in a new browser tab, or in the parent frame if Mendix is included as an iframe.",
-  "copyright": "DDOTS",
+  "copyright": "Danique Montanus",
   "author": "Danique",
   "engines": {
     "node": ">=12"
   },
   "config": {
-    "projectPath": "C:\\Users\\daniq\\OneDrive\\One drive shizzle\\Documenten\\Mendix\\AppTest-main/",
+    "projectPath": "C:\\Users\\daniq\\OneDrive\\One drive shizzle\\Documenten\\Mendix\\testLinkWidget-main/",
     "mendixHost": "http://localhost:8080",
     "developmentPort": "3000"
   },
-  "packagePath": "nl.ddots",
+  "packagePath": "ddots",
   "scripts": {
     "start": "pluggable-widgets-tools start:web",
     "build": "pluggable-widgets-tools build:web",
