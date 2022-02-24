@@ -31,7 +31,7 @@ Have full control over the behavior of a hyperlink in your Mendix application. Y
 
 ## Sandbox environment
 
-https://apptest732-sandbox.mxapps.io/index.html?profile=Responsive
+https://widgettest140-sandbox.mxapps.io/index.html?profile=Responsive
 
 ## Development and contribution
 
