@@ -1,6 +1,5 @@
 import { Component, createElement } from "react";
 
-import "./ui/LinkWidget.css";
 
 export default class LinkWidget extends Component {
     render() {
