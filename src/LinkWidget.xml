@@ -11,7 +11,7 @@
     <properties>
         <propertyGroup caption="General">
             <propertyGroup caption="Main">
-                <property key="textLink" type="string" required="true">
+                <property key="textLink" type="textTemplate" required="true">
                     <caption>Caption</caption>
                     <description></description>
                 </property>

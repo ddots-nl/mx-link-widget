@@ -8,10 +8,10 @@ export default class LinkWidget extends Component {
             <a 
                 href={urlLink.value} 
                 target={howToOpenUrl} 
-                title={tooltip} 
+                title={tooltip ? tooltip : ""} 
                 rel="noreferrer noopener">
-                <i class={`glyphicon ${JSON.stringify(icon.value.iconClass).replace(/"/g, '')}`}></i> 
-                {textLink}
+                <i className={icon ? `glyphicon ${JSON.stringify(icon.value.iconClass).replace(/"/g, '')}` : ""}></i> 
+                {textLink.value}
             </a>
         )
     }
